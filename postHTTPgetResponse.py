@@ -1,17 +1,16 @@
 import json
 import urllib2
-
-data = {'first_name':   'Lucas',
-    'last_name': 'Ruben',
-    'email':  'lukasrub@gmail.com',
-    'phone': '+5493425947430',
-    'cover_letter': 'Ruben',
-    'urls': [	'http://www.westernoriental.com', 
-    			'http://www.rainbowtours.co.uk',
-    			'http://www.regent-holidays.co.uk'
+#JSON with the data we want to send
+data = {'first_name':   'name',
+    'last_name': 'lastName',
+    'email':  'email',
+    'phone': 'mobile',
+    'urls': [	'URL1', 
+    			'URL2',
+    			'URL3'
     		]}
 data_json = json.dumps(data)
-url = 'https://app.close.io/hackwithus/'
+url = 'URL'
 r = urllib2.Request(url)
 r.add_header('Content-Type', 'application/json')
 
